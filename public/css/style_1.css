@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTRa1RVmPjeKy21_GQJaLlJI.woff) format('woff');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/u-WUoqrET9fUeobQW7jkRT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Pacifico Regular'), local('Pacifico-Regular'), url(http://themes.googleusercontent.com/static/fonts/pacifico/v4/yunJt0R8tCvMyj_V4xSjafesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+
+html, body {
+    font-family: 'Open Sans', Verdana, Geneva, sans-serif;
+    color:#000;
+    font-size: 1em;
+    background-color: #fff;
+}
+body{
+    border: 0.12em solid #57ABB8;
+    border-radius: 1em;
+    margin:  auto auto !important;
+    width: 65%
+}
+a{
+    color: #000099;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover{
+    color: #fcf4f4;
+}
+figcaption{
+    font-size: 0.85em;
+    padding: 0.25em;
+    text-align: center;
+}
+img,video{
+    max-width: 100%;
+}
+header, section#contenido, footer{
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+}
+header h1 , nav{
+    display: inline-block;
+    max-width: 100%; /*Esto es un 100% del 90% del header declarado arriba*/
+    vertical-align: top;
+}
+form{
+    width: 100%;
+}
+form div{
+    margin: 0.5em;
+}
+iframe{
+    border-radius: 0.5em;
+}
+aside{
+    width: 30%;
+}
+aside img{
+    border-radius: 0.5em;
+}
+
+footer{
+    font-size: 0.75em;
+    padding: 0.75em;
+}
+footer a{
+    color: #000;
+    font-weight: normal;
+}
+.fade{
+    transition: all 0.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
+    border-radius: 0.5em;
+    opacity: 1;
+    width: 50%;
+    height: 50%
+}
+.fade:hover{
+    transition: all 0.4s ease-in;
+    -webkit-transition: all 0.4s ease-in;
+    opacity: 0.7;
+}

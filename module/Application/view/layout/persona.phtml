@@ -1,0 +1,92 @@
+<?php echo $this->doctype(); ?>
+<html lang="en">
+    <head>
+        <?php echo $this->headTitle($this->title); ?>
+        <meta charset="utf-8">
+        <?php
+        echo $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                ->appendName('description', 'content=EN ESTA PAGINA ENCONTRARAS LO MEJOR DE VENTAS')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php
+        echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon',
+                    'href' => $this->basePath() . '/img/favicon01.ico'))
+                ->prependStylesheet($this->basePath() . '/css/normalize.css')
+                ->prependStylesheet($this->basePath() . '/css/style_1.css')
+                ->prependStylesheet($this->basePath() . '/css/menu.css')
+                ->prependStylesheet($this->basePath() . '/css/genericons.css')
+        ?>
+
+        <!-- Scripts -->
+        <?php
+        echo $this->headScript()
+                ->prependFile('http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+                ->prependFile('http://html5shiv.googlecode.com/svn/trunk/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',));
+        ?>
+    </head>
+    <body>
+        <header>
+            <h1>
+                <a href="index.jpg">
+                    <img class="fade" src="<?php echo $this->basePath('img/logo-jxtux.jpeg') ?>" title="Logo de jxtux" />
+                </a>
+            </h1>
+        </header>
+        <nav>
+            <ul class="menu">
+                <li><a href="" class="mp1">Inicio</a></li>
+                <li><a href="" class="mp">Servicios</a>
+                    <ul>
+                        <li><a href="">Submenu 2.1</a></li>
+                        <li><a href="">Submenu 2.2</a></li>
+                        <li><a href="">Submenu 2.3</a></li>
+                        <li><a href="">Submenu 2.4 <div alt="f104" class="genericon genericon-video"></div></a>
+                            <ul>
+                                <li><a href="">Submenu 2.4.1</a></li>
+                                <li><a href="">Submenu 2.4.2</a></li>
+                                <li><a href="">Submenu 2.4.3</a></li>
+                                <li><a href="">Submenu 2.4.4 <div alt="f104" class="genericon genericon-video"></div></a>
+                                    <ul>
+                                        <li><a href="">Submenu 2.4.4.1</a></li>
+                                        <li><a href="">Submenu 2.4.4.2</a></li>
+                                        <li><a href="">Submenu 2.4.4.3</a></li>
+                                        <li><a href="">Submenu 2.4.4.4</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="" class="mp">Acerca de</a>
+                    <ul>
+                        <li><a href="">Submenu 3.1</a></li>
+                        <li><a href="">Submenu 3.2</a></li>
+                        <li><a href="">Submenu 3.3</a></li>
+                        <li><a href="">Submenu 3.4 <div alt="f104" class="genericon genericon-video"></div></a>
+                            <ul>
+                                <li><a href="">Submenu 3.4.1</a></li>
+                                <li><a href="">Submenu 3.4.2</a></li>
+                                <li><a href="">Submenu 3.4.3</a></li>
+                                <li><a href="">Submenu 3.4.4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="" class="mp2">Contacto</a></li>                
+            </ul>
+        </nav>
+
+        <section id="contenido">
+            <br>
+            <p>Saludo: <?php echo $this->saludo; ?></p>
+            <?php echo $this->content; ?>
+        </section>
+
+        <footer>
+            &copy; Lima - Peru <a href="https://twitter.com/jxtux" target="_blank">@jxtux</a> 2013 - <?php echo date('Y') ?> 
+        </footer>
+    </body>
+</html>
