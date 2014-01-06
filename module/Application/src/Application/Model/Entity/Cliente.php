@@ -8,6 +8,7 @@ Class Cliente {
 
     private $nombre;
     private $codigo;
+    private $email;
 
     public function __construct() {
         //
@@ -29,9 +30,17 @@ Class Cliente {
         $this->codigo = $codigo;
     }
 
+    public function getEmail() {
+        return $this->email;
+    }
+
+    public function setEmail($email) {
+        $this->email = $email;
+    }
+
     public function __toString() {
 
-        return "{" . $this->nombre . "," . $this->codigo . "}";
+        return "{".$this->nombre.",".$this->codigo. ",".$this->email."}";
     }
 
 }

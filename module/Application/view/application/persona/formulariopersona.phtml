@@ -1,0 +1,46 @@
+<?php
+$form = $this->personaform;
+$form->prepare(); // va cargar datos de formulario desde un controlador atento
+$form->setAttribute('action', 'recibe'); // ruta application/persona/recibe  ..... modulo/controlador/metodo
+$form->setAttribute('method', 'post');
+$form->setAttribute('class', 'zf-green');
+$formLabel = $this->plugin('formLabel'); // plugin para cargar los label
+
+echo $this->form()->openTag($form); // Render the opening tag
+?> 
+<fieldset id="fieldcs">
+    <legend>Ingresar Clientes</legend>
+    <div class="form_element">
+        <?php
+        $name = $form->get('nombre');
+        echo $formLabel->openTag() . $name->getOption('label');
+        echo $this->formInput($name);
+        echo $this->formElementErrors($name); //para las validaciones donde muestra el error
+        echo $formLabel->closeTag();
+        ?>
+    </div>
+
+    <div class="form_element">
+        <?php
+        $codigo = $form->get('codigo');
+        echo $formLabel->openTag() . $codigo->getOption('label');
+        echo $this->formInput($codigo);
+        echo $this->formElementErrors($codigo);
+        echo $formLabel->closeTag();
+        ?>
+    </div>
+    <div class="form_element">
+        <?php
+        $email = $form->get('email');
+        echo $formLabel->openTag() . $email->getOption('label');
+        echo $this->formInput($email);
+        echo $this->formElementErrors($email);
+        echo $formLabel->closeTag();
+        ?>
+    </div>
+    <div class="btncentrar">
+        <?php echo $this->formInput($form->get('enviar')) ?>
+    </div>    
+</fieldset>
+
+<?php echo $this->form()->closeTag(); ?>

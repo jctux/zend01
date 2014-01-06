@@ -35,7 +35,7 @@ a{
     text-decoration: none;
 }
 a:hover{
-    color: #fcf4f4;
+    color: darkslateblue;
 }
 figcaption{
     font-size: 0.85em;
@@ -91,4 +91,54 @@ footer a{
     transition: all 0.4s ease-in;
     -webkit-transition: all 0.4s ease-in;
     opacity: 0.7;
+}
+
+.input {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border:1px solid #ccc;
+    font-size:13px;
+    width:200px;
+    min-height:23px;
+    margin-bottom:10px;
+    outline: none;
+
+    -webkit-border-radius:7px;
+    -moz-border-radius:7px;
+    -o-border-radius:7px;
+    -ms-border-radius:7px;
+    border-radius:7px;
+    color:#00008B;
+    background: -webkit-gradient(linear, left top, left 10, from(#FFFFFF), color-stop(5%, #D3D3D3 ), to(#FFFFFF));  
+    background: -moz-linear-gradient(top, #FFFFFF, #FFFFFF 1px, #FFFFFF 10px);  
+}
+label {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #00008B;
+    font-weight: bold;
+    font-size:13px;
+}
+#fieldcs{
+    width: 50%;
+    color: #00008B;
+    margin: 0 auto;
+    text-align: left;
+    font-weight: bold;
+    font-size:16px;
+}
+input[type=submit] {
+    width:80px;
+    padding:3px; 
+    background: -webkit-gradient(linear, left top, left 20, from(#999999), color-stop(5%, #FFFFFF ), to(#666666));  
+    cursor: pointer;
+    color: #00008B;
+    font-weight: bold;
+}
+
+input[type=submit]:hover{
+    background: -webkit-gradient(linear, left top, left 20, from(#555555), color-stop(5%, #FFFFFF ), to(#999999));  
+}
+.btncentrar{
+    text-align: center;
+    margin: 0 auto;
+
 }
