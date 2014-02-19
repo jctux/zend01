@@ -13,31 +13,83 @@ echo $this->form()->openTag($form); // Render the opening tag
     <div class="form_element">
         <?php
         $name = $form->get('nombre');
-        echo $formLabel->openTag() . $name->getOption('label');
+        echo $this->formLabel($name);
         echo $this->formInput($name);
         echo $this->formElementErrors($name); //para las validaciones donde muestra el error
-        echo $formLabel->closeTag();
         ?>
     </div>
 
     <div class="form_element">
         <?php
         $codigo = $form->get('codigo');
-        echo $formLabel->openTag() . $codigo->getOption('label');
+        echo $this->formLabel($codigo);
         echo $this->formInput($codigo);
         echo $this->formElementErrors($codigo);
-        echo $formLabel->closeTag();
         ?>
     </div>
     <div class="form_element">
         <?php
         $email = $form->get('email');
-        echo $formLabel->openTag() . $email->getOption('label');
+        echo $this->formLabel($email);
         echo $this->formInput($email);
         echo $this->formElementErrors($email);
-        echo $formLabel->closeTag();
         ?>
     </div>
+
+    <div class="form-element">
+        <?php
+        $file = $form->get('archivo_img');
+        echo $this->formLabel($file);
+        echo $this->formFile($file);
+        echo $this->formElementErrors($file);
+        ?>
+    </div>
+
+    <div class="form_element">
+        <?php
+        $genero = $form->get('genero');
+        echo $this->formLabel($genero);
+        echo $this->formRadio($genero);
+        echo $this->formElementErrors($genero);
+        ?>
+    </div>
+
+    <div class="form_element">
+        <?php
+        $language = $form->get('language');
+        echo $this->formLabel($language);
+        echo $this->formMultiCheckbox($language);
+        echo $this->formElementErrors($language);
+        ?>
+    </div>
+
+    <div class="form_element">
+        <?php
+        $languages = $form->get('languages');
+        echo $this->formLabel($languages);
+        echo $this->formSelect($languages);
+        echo $this->formElementErrors($languages);
+        ?>
+    </div>
+
+    <div class="form_element">
+        <?php
+        $fecha = $form->get('fecha');
+        echo $this->formLabel($fecha);
+        echo $this->formInput($fecha);
+        echo $this->formElementErrors($fecha);
+        ?>
+    </div>
+
+    <div class="form_element">
+        <?php
+        $textarea = $form->get('textarea');
+        echo $this->formLabel($textarea);
+        echo $this->formTextArea($textarea);
+        echo $this->formElementErrors($textarea);
+        ?>
+    </div>
+
     <div class="btncentrar">
         <?php echo $this->formInput($form->get('enviar')) ?>
     </div>    

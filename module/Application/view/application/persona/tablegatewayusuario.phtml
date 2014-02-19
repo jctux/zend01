@@ -1,0 +1,10 @@
+<h3><?php echo $titulo; ?></h3>
+
+<ul>
+    <?php foreach ($datos as $value) { ?>
+        <li>
+            <?php echo $value['id'] . ":" . $value['nombre'] ?>        
+            <a href="<?php echo  $this->basePath()?>/application/persona/ver/<?php echo $value['id']; ?>">ver</a>
+        </li>
+     <?php } ?>
+</ul>

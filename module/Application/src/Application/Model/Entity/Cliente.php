@@ -1,7 +1,4 @@
 <?php
-
-// namespace Modulo\Model\entity
-
 namespace Application\Model\Entity;
 
 Class Cliente {

@@ -1,0 +1,10 @@
+<h3><?php echo $titulo; ?></h3>
+
+<ul>
+    <?php    
+    foreach ($datos as $key => $value) {
+        echo "<li>" .$key.": ".$value. "</li>";
+    }
+    ?>
+</ul>
+<a href="<?php echo $this->basePath()?>/application/persona/tablegatewayusuario">Volver</a>
